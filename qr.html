@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARNING!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        body {
+            font-family: 'VT323', monospace;
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: red;
+            position: relative;
+            overflow: hidden;
+        }
+        .glitch {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: glitch 1s infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 4px 4px red; }
+            50% { text-shadow: -4px -4px white; }
+            100% { text-shadow: 4px 4px red; }
+        }
+        .alert-box {
+            font-size: 22px;
+            background: red;
+            color: white;
+            padding: 15px;
+            display: block;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        .screen-flicker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 0, 0.1);
+            animation: flicker 0.2s infinite;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen-flicker"></div>
+    <h1 class="glitch">⚠️ WARNING! ⚠️</h1>
+    <p class="alert-box">You just scanned a random QR code! Bad idea! 😨</p>
+    <p class="alert-box">Wait... wait... Your data might be at risk! 📱💀</p>
+    <p class="alert-box">What if this was real? Your phone could be hacked right now! 🛑</p>
+    <p class="alert-box">Next time, think before scanning! Stay safe! 🚀</p>
+    <div class="footer">
+        <span>Daffodil International University</span>
+    </div>
+</body>
+</html>
